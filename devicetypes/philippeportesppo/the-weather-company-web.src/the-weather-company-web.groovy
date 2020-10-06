@@ -269,7 +269,7 @@ def refresh() {
     else
         state.stormalert=false
 
-    if (getDataValue("TWClowtempalert")!="null") {
+    if (getDataValue("TWClowtempalert")) {
         if (getDataValue("TWClowtempalert").toFloat() >= mymap['temperature'].toFloat())
         {
 
@@ -281,7 +281,7 @@ def refresh() {
             state.lowtempalert=false
     }
 
-    if (getDataValue("TWChightempalert")!="null") {
+    if (getDataValue("TWChightempalert")) {
         if (getDataValue("TWChightempalert").toFloat() <= mymap['temperature'].toFloat())
         {
 
@@ -293,7 +293,7 @@ def refresh() {
             state.hightempalert=false
     }
 
-    if (getDataValue("TWClowhumidityalert")!="null") {
+    if (getDataValue("TWClowhumidityalert")) {
         if (getDataValue("TWClowhumidityalert").toFloat() >= mymap['relativeHumidity'].toFloat())
         {
 
@@ -309,7 +309,7 @@ def refresh() {
         }
     }
 
-    if (getDataValue("TWChighhumidityalert")!="null") {
+    if (getDataValue("TWChighhumidityalert")) {
 
         if (getDataValue("TWChighhumidityalert").toFloat() <= mymap['relativeHumidity'].toFloat())
         {
